@@ -1,1 +1,45 @@
-<h1>こんにちは</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ポートフォリオ</title>
+  <style>
+    /* ページ全体のスタイル */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+      background: url('https://s.widget-club.com/images/YyiR86zpwIMIfrCZoSs4ulVD9RF3/78ea35f301c94f6f4c2a5100df46dfe2/1b214d4c0bdd74d683471e20bc7fa6c8.jpg?q=70&w=500') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* テキストのスタイルとアニメーション */
+    .greeting {
+      font-size: 3rem;
+      color: white;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    /* ふわっと表示されるアニメーション */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="greeting">こんにちは</div>
+</body>
+</html>
