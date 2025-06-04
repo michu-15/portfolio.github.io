@@ -5,28 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ポートフォリオ</title>
   <style>
-    /* ページ全体のスタイル */
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: sans-serif;
+      scroll-behavior: smooth;
+      font-family: 'sans-serif';
+    }
+
+    /* ヒーローセクション（最初の挨拶） */
+    .hero {
+      height: 100vh;
       background: url('https://s.widget-club.com/images/YyiR86zpwIMIfrCZoSs4ulVD9RF3/78ea35f301c94f6f4c2a5100df46dfe2/1b214d4c0bdd74d683471e20bc7fa6c8.jpg?q=70&w=500') no-repeat center center fixed;
       background-size: cover;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
-    /* テキストのスタイルとアニメーション */
     .greeting {
       font-size: 3rem;
-      color: white;
       opacity: 0;
       animation: fadeIn 2s ease-out forwards;
     }
 
-    /* ふわっと表示されるアニメーション */
     @keyframes fadeIn {
       0% {
         opacity: 0;
@@ -37,9 +42,59 @@
         transform: translateY(0);
       }
     }
+
+    .scroll-button {
+      margin-top: 40px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .scroll-button:hover {
+      background: white;
+    }
+
+    /* 自己紹介セクション */
+    .about {
+      padding: 80px 20px;
+      background: #f7f7f7;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
-  <div class="greeting">こんにちは</div>
+
+  <!-- ヒーローセクション -->
+  <section class="hero">
+    <div class="greeting">こんにちは</div>
+    <a href="#about"><button class="scroll-button">自己紹介を見る</button></a>
+  </section>
+
+  <!-- 自己紹介セクション -->
+  <section class="about" id="about">
+    <h2>自己紹介</h2>
+    <p>
+      はじめまして！私はWeb開発やデザインが大好きなクリエイターです。<br />
+      HTML、CSS、JavaScriptを使って、見る人の心を動かすサイト作りを目指しています。<br />
+      このポートフォリオでは、私の作品やスキルを紹介していきます。
+    </p>
+  </section>
+
 </body>
 </html>
